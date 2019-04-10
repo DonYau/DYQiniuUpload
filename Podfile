@@ -6,7 +6,6 @@ target 'DYQiniuUpload' do
   use_frameworks!
 
   # Pods for DYQiniuUpload
-
   pod 'SSZipArchive'
   pod 'Qiniu'
 end
@@ -16,5 +15,4 @@ target 'DYQiniuUploadExample' do
   use_frameworks!
 
   # Pods for DYQiniuUploadExample
-
 end

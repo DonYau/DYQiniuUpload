@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BEAC2384B2F7F482F86DCF5B /* Pods_DYQiniuUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058975C3D180CD05BD9A373 /* Pods_DYQiniuUpload.framework */; };
 		CD6C3597E84F65B9E15E37FF /* Pods_DYQiniuUploadExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF993B9613D8DEDFA05657BD /* Pods_DYQiniuUploadExample.framework */; };
 		D2B40D93225DBD2900932079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40D92225DBD2900932079 /* AppDelegate.swift */; };
 		D2B40D95225DBD2900932079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40D94225DBD2900932079 /* ViewController.swift */; };
@@ -47,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		1058975C3D180CD05BD9A373 /* Pods_DYQiniuUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYQiniuUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E670BF143157A8EE6F54CEC /* Pods-DYQiniuUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYQiniuUpload.debug.xcconfig"; path = "Target Support Files/Pods-DYQiniuUpload/Pods-DYQiniuUpload.debug.xcconfig"; sourceTree = "<group>"; };
-		8D0746F2373B97A430EF9FE1 /* Pods-DYQiniuUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYQiniuUpload.release.xcconfig"; path = "Target Support Files/Pods-DYQiniuUpload/Pods-DYQiniuUpload.release.xcconfig"; sourceTree = "<group>"; };
 		D11064EB5680EB859F1960FE /* Pods-DYQiniuUploadExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYQiniuUploadExample.release.xcconfig"; path = "Target Support Files/Pods-DYQiniuUploadExample/Pods-DYQiniuUploadExample.release.xcconfig"; sourceTree = "<group>"; };
 		D2B40D8F225DBD2900932079 /* DYQiniuUploadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYQiniuUploadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B40D92225DBD2900932079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEAC2384B2F7F482F86DCF5B /* Pods_DYQiniuUpload.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +86,6 @@
 		3FB5BFDB1CE75D04C48D5161 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E670BF143157A8EE6F54CEC /* Pods-DYQiniuUpload.debug.xcconfig */,
-				8D0746F2373B97A430EF9FE1 /* Pods-DYQiniuUpload.release.xcconfig */,
 				D717340E3A77481BA06B7D97 /* Pods-DYQiniuUploadExample.debug.xcconfig */,
 				D11064EB5680EB859F1960FE /* Pods-DYQiniuUploadExample.release.xcconfig */,
 			);
@@ -175,7 +169,6 @@
 				D2B40D8C225DBD2900932079 /* Frameworks */,
 				D2B40D8D225DBD2900932079 /* Resources */,
 				D2B40DB5225DBD4D00932079 /* Embed Frameworks */,
-				4D9319175BD9EEC261A1AC4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +184,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2B40DB4225DBD4D00932079 /* Build configuration list for PBXNativeTarget "DYQiniuUpload" */;
 			buildPhases = (
-				D837DD40654C0F422E8DF567 /* [CP] Check Pods Manifest.lock */,
 				D2B40DA4225DBD4C00932079 /* Headers */,
 				D2B40DA5225DBD4C00932079 /* Sources */,
 				D2B40DA6225DBD4C00932079 /* Frameworks */,
@@ -264,32 +256,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D9319175BD9EEC261A1AC4F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DYQiniuUploadExample/Pods-DYQiniuUploadExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
-				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
-				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DYQiniuUploadExample/Pods-DYQiniuUploadExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A9F50C10144F1A36476FE9A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,28 +272,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DYQiniuUploadExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D837DD40654C0F422E8DF567 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DYQiniuUpload-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,7 +484,6 @@
 		};
 		D2B40DB2225DBD4D00932079 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E670BF143157A8EE6F54CEC /* Pods-DYQiniuUpload.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -557,7 +500,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = donyau.DYQiniuUpload;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -570,7 +513,6 @@
 		};
 		D2B40DB3225DBD4D00932079 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D0746F2373B97A430EF9FE1 /* Pods-DYQiniuUpload.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -587,7 +529,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = donyau.DYQiniuUpload;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
