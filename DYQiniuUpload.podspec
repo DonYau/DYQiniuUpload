@@ -24,5 +24,7 @@ s.ios.deployment_target = '8.0'
 s.swift_version = '4.2'
 s.source_files = 'DYQiniuUpload/**/*.{h,m}'
 s.public_header_files = 'DYQiniuUpload/**/{DYQiniuUpload,DYQiniuUploadTool}.h'
+s.dependency 'SSZipArchive'
+s.dependency 'Qiniu'
 end
 
