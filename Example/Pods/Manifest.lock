@@ -1,11 +1,9 @@
 PODS:
-  - DYQiniuUpload (0.2.1):
+  - DYQiniuUpload (0.2.3):
     - Qiniu
-    - SSZipArchive
   - HappyDNS (0.3.15)
   - Qiniu (7.2.5):
     - HappyDNS (~> 0.3)
-  - SSZipArchive (2.1.5)
 
 DEPENDENCIES:
   - DYQiniuUpload (from `../`)
@@ -14,17 +12,15 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - HappyDNS
     - Qiniu
-    - SSZipArchive
 
 EXTERNAL SOURCES:
   DYQiniuUpload:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DYQiniuUpload: f8a91e1c02d603c5ddd681356eaa14a7ad4cb888
+  DYQiniuUpload: a1705e3c63d8b17b844efac4ec40a407bf6c269e
   HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
   Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
-  SSZipArchive: cefe1364104a0231268a5deb8495bdf2861f52f0
 
 PODFILE CHECKSUM: b0f8d9cdbc47d31306991617c008b47a433f540f
 
