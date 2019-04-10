@@ -1,0 +1,6 @@
+framework module DYQiniuUpload {
+  umbrella header "DYQiniuUpload-umbrella.h"
+
+  export *
+  module * { export * }
+}
