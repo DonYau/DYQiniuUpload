@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  DYQiniuUploadExample
 //
-//  Created by donyau on 2019/4/10.
+//  Created by donyau on 2019/1/10.
 //  Copyright © 2019 donyau. All rights reserved.
 //
 
