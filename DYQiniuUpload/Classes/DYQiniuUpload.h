@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, DYQNZoneMode) {
     DYQNZone3,//北美
 };
 
-@interface DYQiniuUploadTool : NSObject
+@interface DYQiniuUpload : NSObject
 
 + (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(void (^)(BOOL success))block;
 

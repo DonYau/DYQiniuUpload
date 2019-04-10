@@ -9,6 +9,10 @@ notifications:
 before_install:
 - env
 - locale
+- gem install cocoapods
+- pod --version
+- pod setup --silent > /dev/null
+- pod repo update --silent
 - xcodebuild -version
 - xcodebuild -showsdks
 - xcodebuild -list

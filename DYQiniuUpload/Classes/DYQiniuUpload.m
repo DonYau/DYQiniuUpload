@@ -6,12 +6,12 @@
 //  Copyright © 2019 donyau. All rights reserved.
 //
 
-#import "DYQiniuUploadTool.h"
+#import "DYQiniuUpload.h"
 #import <Qiniu/QiniuSDK.h>
 #import <Qiniu/QN_GTM_Base64.h>
 #import <CommonCrypto/CommonHMAC.h>
 
-@implementation DYQiniuUploadTool
+@implementation DYQiniuUpload
 
 + (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(nonnull NSString *)key uploadFilePath:(nonnull NSString *)uploadFilePath result:(nonnull void (^)(BOOL))block{
     QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
