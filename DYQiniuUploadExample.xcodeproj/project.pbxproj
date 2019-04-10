@@ -19,7 +19,6 @@
 		D2B40DB1225DBD4D00932079 /* DYQiniuUpload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2B40DA9225DBD4C00932079 /* DYQiniuUpload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D2B40DBA225DBE2200932079 /* DYQiniuUploadTool.h in Headers */ = {isa = PBXBuildFile; fileRef = D2B40DB8225DBE2200932079 /* DYQiniuUploadTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2B40DBB225DBE2200932079 /* DYQiniuUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B40DB9225DBE2200932079 /* DYQiniuUploadTool.m */; };
-		D2B40DBD225DC04800932079 /* DYQiniuUpload.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2B40DBC225DC04800932079 /* DYQiniuUpload.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		D2B40DAC225DBD4D00932079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B40DB8225DBE2200932079 /* DYQiniuUploadTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYQiniuUploadTool.h; sourceTree = "<group>"; };
 		D2B40DB9225DBE2200932079 /* DYQiniuUploadTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYQiniuUploadTool.m; sourceTree = "<group>"; };
-		D2B40DBC225DC04800932079 /* DYQiniuUpload.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DYQiniuUpload.podspec; sourceTree = "<group>"; };
 		D717340E3A77481BA06B7D97 /* Pods-DYQiniuUploadExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYQiniuUploadExample.debug.xcconfig"; path = "Target Support Files/Pods-DYQiniuUploadExample/Pods-DYQiniuUploadExample.debug.xcconfig"; sourceTree = "<group>"; };
 		FF993B9613D8DEDFA05657BD /* Pods_DYQiniuUploadExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYQiniuUploadExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,7 +110,6 @@
 		D2B40D86225DBD2900932079 = {
 			isa = PBXGroup;
 			children = (
-				D2B40DBC225DC04800932079 /* DYQiniuUpload.podspec */,
 				D2B40D91225DBD2900932079 /* DYQiniuUploadExample */,
 				D2B40DAA225DBD4D00932079 /* DYQiniuUpload */,
 				D2B40D90225DBD2900932079 /* Products */,
@@ -252,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B40D9D225DBD2A00932079 /* LaunchScreen.storyboard in Resources */,
-				D2B40DBD225DC04800932079 /* DYQiniuUpload.podspec in Resources */,
 				D2B40D9A225DBD2A00932079 /* Assets.xcassets in Resources */,
 				D2B40D98225DBD2900932079 /* Main.storyboard in Resources */,
 			);
