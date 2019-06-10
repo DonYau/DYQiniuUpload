@@ -215,8 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DYQiniuUpload_Example/Pods-DYQiniuUpload_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DYQiniuUpload/DYQiniuUpload.framework",
@@ -224,8 +222,6 @@
 				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYQiniuUpload.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",

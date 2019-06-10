@@ -21,6 +21,11 @@ typedef NS_ENUM(NSUInteger, DYQNZoneMode) {
 
 + (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(void (^)(BOOL success))block;
 
++ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL success))block;
+
+
++ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL success))block;
+
 @end
 
 NS_ASSUME_NONNULL_END

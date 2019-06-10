@@ -1,5 +1,5 @@
 PODS:
-  - DYQiniuUpload (0.2.3):
+  - DYQiniuUpload (0.1.1):
     - Qiniu
   - HappyDNS (0.3.15)
   - Qiniu (7.2.5):
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DYQiniuUpload: a1705e3c63d8b17b844efac4ec40a407bf6c269e
+  DYQiniuUpload: 1e8873ef37073618af755bf9db1c2f72137eb232
   HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
   Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
 
 PODFILE CHECKSUM: b0f8d9cdbc47d31306991617c008b47a433f540f
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.1

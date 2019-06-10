@@ -74,4 +74,52 @@
     return hash;
 }
 
+
++ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL))block {
+    QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
+        switch (zoneMode) {
+            case DYQNZone1:
+                builder.zone = [QNFixedZone zone1];
+                break;
+            case DYQNZone2:
+                builder.zone = [QNFixedZone zone2];
+                break;
+            case DYQNZone3:
+                builder.zone = [QNFixedZone zoneNa0];
+                break;
+            default:
+                builder.zone = [QNFixedZone zone0];
+                break;
+        }
+    }];
+    QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
+    [upManager putData:data key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+        block(info.ok);
+    } option:nil];
+}
+
++ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL))block {
+    QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
+        switch (zoneMode) {
+            case DYQNZone1:
+                builder.zone = [QNFixedZone zone1];
+                break;
+            case DYQNZone2:
+                builder.zone = [QNFixedZone zone2];
+                break;
+            case DYQNZone3:
+                builder.zone = [QNFixedZone zoneNa0];
+                break;
+            default:
+                builder.zone = [QNFixedZone zone0];
+                break;
+        }
+    }];
+    QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
+    [upManager putFile:filePath key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+        block(info.ok);
+    } option:nil];
+}
+
+
 @end
