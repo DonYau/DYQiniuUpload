@@ -6,22 +6,8 @@
 //  Copyright (c) 2015年 Qiniu. All rights reserved.
 //
 
-#import "QNHttpDelegate.h"
-#import "QNUpToken.h"
-#import "QNUploadManager.h"
-#import <Foundation/Foundation.h>
+#import "QNBaseUpload.h"
 
-@interface QNFormUpload : NSObject
-
-- (instancetype)initWithData:(NSData *)data
-                     withKey:(NSString *)key
-                withFileName:(NSString *)fileName
-                   withToken:(QNUpToken *)token
-       withCompletionHandler:(QNUpCompletionHandler)block
-                  withOption:(QNUploadOption *)option
-             withHttpManager:(id<QNHttpDelegate>)http
-           withConfiguration:(QNConfiguration *)config;
-
-- (void)put;
+@interface QNFormUpload : QNBaseUpload
 
 @end

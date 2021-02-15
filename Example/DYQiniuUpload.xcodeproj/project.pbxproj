@@ -151,6 +151,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BV3EPFW3GV;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -370,6 +371,7 @@
 			baseConfigurationReference = 949734C1D47EE26A8E9342D2 /* Pods-DYQiniuUpload_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BV3EPFW3GV;
 				INFOPLIST_FILE = DYQiniuUpload/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -385,6 +387,7 @@
 			baseConfigurationReference = 06AA4129C3390AF71562F58E /* Pods-DYQiniuUpload_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BV3EPFW3GV;
 				INFOPLIST_FILE = DYQiniuUpload/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

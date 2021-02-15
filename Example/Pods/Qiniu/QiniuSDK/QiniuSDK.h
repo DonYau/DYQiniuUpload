@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "QNFixedZone.h"
+#import "QNAutoZone.h"
 #import "QNConfiguration.h"
 #import "QNFileRecorder.h"
-#import "QNPipeline.h"
 #import "QNResponseInfo.h"
 #import "QNUploadManager.h"
 #import "QNUploadOption.h"
 #import "QNUrlSafeBase64.h"
+#import "QNReportConfig.h"
+#import "QNPipeline.h"

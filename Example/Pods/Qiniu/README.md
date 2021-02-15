@@ -3,8 +3,8 @@
 [![@qiniu on weibo](http://img.shields.io/badge/weibo-%40qiniutek-blue.svg)](http://weibo.com/qiniutek)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/qiniu/objc-sdk.svg?branch=master)](https://travis-ci.org/qiniu/objc-sdk)
+[![GitHub release](https://img.shields.io/github/v/tag/qiniu/objc-sdk.svg?label=release)](https://github.com/qiniu/objc-sdk/releases)
 [![codecov](https://codecov.io/gh/qiniu/objc-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/qiniu/objc-sdk)
-[![Latest Stable Version](http://img.shields.io/cocoapods/v/Qiniu.svg)](https://github.com/qiniu/objc-sdk/releases)
 ![Platform](http://img.shields.io/cocoapods/p/Qiniu.svg)
 
 
@@ -13,13 +13,17 @@
 通过 CocoaPods
 
 ```ruby
-pod "Qiniu", "~> 7.2" 
+pod "Qiniu", "~> 8.0.0" 
 ```
 
 ## 运行环境
 
 |               Qiniu SDK 版本               | 最低 iOS版本 | 最低 OS X 版本 |     Notes     |
 | :--------------------------------------: | :------: | :--------: | :-----------: |
+|                  8.0.x                   |  iOS 7   | OS X 10.14  | Xcode 最低版本 11 |
+|                  7.5.x                   |  iOS 7   | OS X 10.9  | Xcode 最低版本 6. |
+|                  7.4.x                   |  iOS 7   | OS X 10.9  | Xcode 最低版本 6. |
+|                  7.3.x                   |  iOS 7   | OS X 10.9  | Xcode 最低版本 6. |
 |                  7.2.x                   |  iOS 7   | OS X 10.9  | Xcode 最低版本 6. |
 |         7.1.x / AFNetworking-3.x         |  iOS 7   | OS X 10.9  | Xcode 最低版本 6. |
 | [7.0.x / AFNetworking-2.x](https://github.com/qiniu/objc-sdk/tree/7.0.x/AFNetworking-2.x) |  iOS 6   | OS X 10.8  | Xcode 最低版本 5. |
@@ -28,6 +32,7 @@ pod "Qiniu", "~> 7.2"
 
 ## 使用方法
 
+### 简单上传
 ```Objective-C
 #import <QiniuSDK.h>
 ...
@@ -38,27 +43,38 @@ pod "Qiniu", "~> 7.2"
         complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
         NSLog(@"%@", info);
         NSLog(@"%@", resp);
-    } option:nil];
+    } option:[QNUploadOption defaultOptions]];
+...
+```
+
+### 如使用最新版的sdk，默认自动判断上传空间。如需要指定上传区域，可以按如下方式上传：
+```Objective-C
+#import <QiniuSDK.h>
+...
+    QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
+        builder.useHttps = NO;// 是否使用https
+        builder.zone = [QNFixedZone zone0];// 指定华东区域
+        // builder.zone = [QNFixedZone zone1];// 指定华北区域
+        // builder.zone = [QNFixedZone zone2];// 指定华南区域
+        // builder.zone = [QNFixedZone zoneNa0];// 指定北美区域
+        // builder.zone = [QNFixedZone zoneAs0];// 指定东南亚区域
+    }];
+    
+    QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
+    QNUploadOption *option = [[QNUploadOption alloc] initWithProgressHandler:^(NSString *key, float percent) {
+        NSLog(@"progress %f", percent);
+    }];
+    
+    NSData *data = [@"Hello, World!" dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *token = @"从服务端SDK获取";
+    [upManager putData:data key:@"hello" token:token complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+        NSLog(@"%@", info);
+        NSLog(@"%@", resp);
+    } option:option];
 ...
 ```
 
 建议 QNUploadManager 创建一次重复使用, 或者使用单例方式创建.
-
-
-
-**注意**： 如使用最新版的sdk(>7.1.4),可自动判断上传空间。按如下方式使用：
-
-```objective-c
-QNConfiguration *config =[QNConfiguration  	build:^(QNConfigurationBuilder *builder) {
-  NSMutableArray *array = [[NSMutableArray alloc] init];
-  [array addObject:[QNResolver systemResolver]];
-  QNDnsManager *dns = [[QNDnsManager alloc] init:array networkInfo:[QNNetworkInfo normal]];//是否选择  https  上传
-  builder.zone = [[QNAutoZone alloc] initWithHttps:YES dns:dns];//设置断点续传
-  NSError *error;
-  builder.recorder =  [QNFileRecorder fileRecorderWithFolder:@"保存目录" error:&error];}];
-```
-
-
 
 ## 测试
 

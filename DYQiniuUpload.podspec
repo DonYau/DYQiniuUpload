@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYQiniuUpload'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A short description of DYQiniuUpload.'
 
   s.description      = <<-DESC
@@ -25,5 +25,5 @@ TODO: Add long description of the pod here.
   s.source_files = 'DYQiniuUpload/Classes/**/*'
   s.swift_version = '4.2'
   s.public_header_files = 'DYQiniuUpload/Classes/**/{DYQiniuUpload}.h'
-  s.dependency 'Qiniu'
+  s.dependency 'Qiniu', '>= 8.0.0'
 end
