@@ -1,5 +1,5 @@
 PODS:
-  - DYQiniuUpload (0.2.0):
+  - DYQiniuUpload (0.3.0):
     - Qiniu
   - HappyDNS (0.3.17)
   - Qiniu (8.0.0):
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DYQiniuUpload: 8e891bbf684d18833427dd5e0a30970083af36a8
+  DYQiniuUpload: b4e34a418cebc7f05eeed779c373106a016ccd4e
   HappyDNS: 848ef73e24f2b0e2752064223ce2dc0dd88900ea
   Qiniu: b9c638318b8179d01d8dfc745159e4047e8975b7
 
