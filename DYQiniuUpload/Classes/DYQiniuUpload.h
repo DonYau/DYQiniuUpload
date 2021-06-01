@@ -21,12 +21,12 @@ typedef void(^QiniuUploadCallback)(BOOL success, NSDictionary *resp);
 
 @interface DYQiniuUpload : NSObject
 
-+ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(QiniuUploadCallback)block;
++ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString * __nullable)key uploadFilePath:(NSString *)uploadFilePath result:(QiniuUploadCallback)block;
 
-+ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
++ (void)updateQiNiuWithData:(NSData *)data key:(NSString * __nullable)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
 
 
-+ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
++ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString * __nullable)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
 
 @end
 
