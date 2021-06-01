@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYQiniuUpload'
-  s.version          = '0.4.0'
+  s.version          = '0.4.1'
   s.summary          = 'A short description of DYQiniuUpload.'
 
   s.description      = <<-DESC
