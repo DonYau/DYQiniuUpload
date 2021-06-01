@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     func uploadFile() {
-        DYQiniuUpload.updateQiNiu(withAccessKey: "xxx", secretKey: "xxx", scope: "xxx", zone: .zone0, key: "xxx", uploadFilePath: "xxx") { (success) in
+        DYQiniuUpload.updateQiNiu(withAccessKey: "xxx", secretKey: "xxx", scope: "xxx", zone: .zone0, key: "xxx", uploadFilePath: "xxx") { (success, resp) in
             
         }
     }

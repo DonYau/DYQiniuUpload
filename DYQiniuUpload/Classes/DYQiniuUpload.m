@@ -13,7 +13,7 @@
 
 @implementation DYQiniuUpload
 
-+ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(nonnull NSString *)key uploadFilePath:(nonnull NSString *)uploadFilePath result:(nonnull void (^)(BOOL))block{
++ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(QiniuUploadCallback)block {
     QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
         switch (zoneMode) {
             case DYQNZone1:
@@ -33,7 +33,7 @@
     NSString *token = [self createTokenWithScope:scope accessKey:accessKey secretKey:secretKey];
     QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
     [upManager putFile:uploadFilePath key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        block(info.ok);
+        block(info.ok, resp);
     } option:nil];
 }
 
@@ -75,7 +75,7 @@
 }
 
 
-+ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL))block {
++ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(nonnull QiniuUploadCallback)block {
     QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
         switch (zoneMode) {
             case DYQNZone1:
@@ -94,11 +94,11 @@
     }];
     QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
     [upManager putData:data key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        block(info.ok);
+        block(info.ok, resp);
     } option:nil];
 }
 
-+ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL))block {
++ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block {
     QNConfiguration *config = [QNConfiguration build:^(QNConfigurationBuilder *builder) {
         switch (zoneMode) {
             case DYQNZone1:
@@ -117,7 +117,7 @@
     }];
     QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
     [upManager putFile:filePath key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        block(info.ok);
+        block(info.ok, resp);
     } option:nil];
 }
 

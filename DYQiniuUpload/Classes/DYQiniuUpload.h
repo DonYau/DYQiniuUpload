@@ -17,14 +17,16 @@ typedef NS_ENUM(NSUInteger, DYQNZoneMode) {
     DYQNZone3,//北美
 };
 
+typedef void(^QiniuUploadCallback)(BOOL success, NSDictionary *resp);
+
 @interface DYQiniuUpload : NSObject
 
-+ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(void (^)(BOOL success))block;
++ (void)updateQiNiuWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey scope:(NSString *)scope zone:(DYQNZoneMode)zoneMode key:(NSString *)key uploadFilePath:(NSString *)uploadFilePath result:(QiniuUploadCallback)block;
 
-+ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL success))block;
++ (void)updateQiNiuWithData:(NSData *)data key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
 
 
-+ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(void (^)(BOOL success))block;
++ (void)updateQiNiuWithFilePath:(NSString *)filePath key:(NSString *)key token:(NSString *)token zone:(DYQNZoneMode)zoneMode result:(QiniuUploadCallback)block;
 
 @end
 
